@@ -1,0 +1,1 @@
+export const defaultColorSet: string[] = ['#087e92','#fbe66a', '#f29157', '#47bcf5', '#68d2e0', '#c8501d', '#62b8c5'];

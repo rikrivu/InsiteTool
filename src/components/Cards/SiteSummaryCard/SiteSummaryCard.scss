@@ -1,0 +1,47 @@
+.ss-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px;
+    height: calc(100% - 17px);
+    overflow-y: auto;
+
+    .ss-card-wrapper, .ss-card-wrapper-maximized {
+        text-align: center;
+        height: 100%;
+
+        .ss-card-value {
+            color: var(--color-blue-alt);
+        }
+    }
+
+    .ss-card-wrapper {
+
+        .ss-card-label {
+            font-size: 12px;
+            padding-bottom: 6px;
+        }
+    
+        .ss-card-value {
+            font-size: 20px;
+        }
+    }
+
+    .ss-card-wrapper-maximized {
+        padding: 40px 0;
+
+        .ss-card-label {
+            font-size: 20px;
+            padding-bottom: 10px;
+        }
+    
+        .ss-card-value {
+            font-size: 40px;
+        }
+    }
+}
+
+.unset-margin {
+    margin: unset;
+    height: unset;
+}

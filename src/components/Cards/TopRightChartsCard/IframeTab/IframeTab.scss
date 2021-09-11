@@ -1,0 +1,15 @@
+.iFrame-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding-top: 10px !important;
+    min-height: 10px !important;
+    overflow-y: auto !important;
+    height: calc(100% - 15px) !important;
+    box-sizing: border-box;
+
+    > *, iframe {
+        height: 100% !important;
+        width: 100% !important;
+    }
+}

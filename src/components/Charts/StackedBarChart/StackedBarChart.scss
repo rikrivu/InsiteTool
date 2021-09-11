@@ -1,0 +1,41 @@
+.sp-legend-container, .sp-legend-container-max {
+    display: grid;
+
+    .sp-legend {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        > div:first-of-type {
+            margin-right: 5px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.sp-legend-container {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+
+    .sp-legend {
+        font-size: 10px;
+
+        > div:first-of-type {
+            width: 10px;
+            height: 10px;
+        }
+    }
+}
+
+.sp-legend-container-max {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    padding-bottom: 10px;
+
+    .sp-legend {
+        font-size: 16px;
+
+        > div:first-of-type {
+            width: 15px;
+            height: 15px;
+        }
+    }
+}

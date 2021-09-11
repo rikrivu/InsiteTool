@@ -1,0 +1,104 @@
+.filters-container {
+
+    .filter-item-wrapper {
+        border-bottom: 1px solid var(--color-grey);
+    
+        .filter-item, .open-filter-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            padding-right: 10px;
+        
+            .filter-btn, .filter-non-btn {
+                display: flex;
+                align-items: center;
+                min-width: max-content;
+                width: 100%;
+                padding: 5px;
+        
+                .panel-arrow {
+                    font-size: 20px;
+                }
+
+                .filter-icon {
+                    margin: 0 10px 0 5px;
+
+                    .MuiSvgIcon-root {
+                        font-size: 14px;
+                    }
+                }
+
+                .filter-label {
+                    font-size: 12px;
+                }
+            }
+        
+            .filter-btn {
+                background: none;
+                border: none;
+                color: var(--color-white);
+                transition: all 0.5s ease;
+        
+                &:hover, &:focus {
+                    outline: none;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .open-filter-item {
+            background: var(--color-black);
+        }
+            
+        .hoverable {
+            transition: all 0.5s ease;
+    
+            &:hover, &:focus {
+                background: var(--color-grey);
+                
+                .panel-arrow {
+                    color: var(--color-black);
+                }
+            }
+        }
+
+        .dropdown-container {
+            background: var(--color-black);
+            padding-bottom: 10px;
+            font-size: 12px;
+
+            .dropdown-label {
+                padding: 5px 0 10px;
+                text-align: center;
+            }
+        }
+    }
+
+    .apply-filters-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+
+        button {
+            color: var(--color-white);
+            background: var(--color-green-alt);
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            transition: all 0.5s ease;
+
+            &:hover, &:focus {
+                cursor: pointer;
+                outline: none;
+                background: var(--color-green-alt2);
+            }
+
+            &:disabled {
+                background: var(--color-grey);
+                cursor: not-allowed;
+            }
+        }
+    }
+}

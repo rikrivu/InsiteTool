@@ -1,0 +1,16 @@
+.chart-filter-dropdown {
+    top: 22px;
+    right: 0;
+
+    .chart-filter-option {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        white-space: nowrap;
+
+        > div {
+            padding-right: 5px;
+        }
+    }
+}

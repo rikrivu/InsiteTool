@@ -1,0 +1,71 @@
+.max-view-container {
+    position: relative;
+    padding: 15px 20px;
+    height: calc(100% - 50px);
+
+    .max-view-tabs-panel {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .max-view-tabs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            box-shadow: 2px -2px 2px 1px var(--color-shadow-grey), -2px -2px 2px 1px var(--color-shadow-grey);
+
+            .max-view-tab {
+                background: var(--color-light-black);
+                border: none;
+                color: var(--color-white);
+                padding: 10px 15px;
+
+                &:hover, &:focus {
+                    outline: none;
+                    cursor: pointer;
+                    background: var(--color-dark-grey);
+                    font-weight: bold;
+                }
+
+                &:first-of-type {
+                    border-top-left-radius: 5px;
+                }
+
+                &:last-of-type {
+                    border-top-right-radius: 5px;
+                }
+            }
+
+            .active-max-view-tab {
+                background: var(--color-dark-grey);
+                font-weight: bold;
+            }
+        }
+
+        .minimize-btn {
+            background: none;
+            border: none;
+            color: var(--color-white);
+            transition: all 0.5s ease;
+
+            &:hover, &:focus {
+                color: var(--color-grey);
+                outline: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .max-view-content-wrapper {
+        height: calc(100% - 35px);
+        padding-bottom: 20px;
+        background: var(--color-light-black);
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        box-shadow: 2px 0px 2px 2px var(--color-shadow-grey), -1px 0px 2px 2px var(--color-shadow-grey);
+    }
+}

@@ -1,0 +1,441 @@
+.esri-map-container {
+    position: relative;
+    height: calc(100% - 3px);
+
+    .esri-widget-btn {
+        position: absolute;
+        opacity: 0.8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--color-black);
+        border: none;
+        color: var(--color-white);
+        padding: 0px;
+
+        &:hover, &:focus {
+            cursor: pointer;
+            outline: none;
+            opacity: 1;
+        }
+    }
+
+    div.esri-widget-btn {
+        width: 24px;
+        height: 24px;
+    }
+
+    .bm-gallery {
+        top: 15px;
+        left: 60px;
+    }
+
+    .layers-list {
+        top: 15px;
+        left: 95px;
+    }
+
+    .bookmark {
+        top: 15px;
+        left: 130px;
+    }
+
+    .measurement {
+        top: 15px;
+        left: 165px;
+
+        > svg {
+            transform: rotate(45deg);
+        }
+    }
+
+    .def-extent {
+        top: 85px;
+        left: 20px;
+    }
+
+    .time-slider {
+        top: 15px;
+        left: 200px;
+    }
+
+    .add-ddSummary {
+        top: 15px;
+        right: 20px;
+        width: 24px;
+        height: 24px;
+
+        > svg {
+            width: 20px;
+            height: 16px;
+        }
+    }
+
+    .add-waterwells {
+        top: 45px;
+        right: 20px;
+        width: 24px;
+        height: 24px; 
+    }
+
+    .widget-wrapper {
+        resize: both;
+        overflow: auto;
+        position: absolute;
+        top: 10px;
+        left: 50px;
+        // width: calc(100% - 40px);
+        // max-width: 450px;
+        // max-height: calc(100% - 22px);
+        background: var(--color-light-black);
+        padding-bottom: 5px;
+        box-shadow: 0px 1px 2px 1px var(--color-shadow-grey2);
+
+        .widget-content, .removable-widget-content {
+            // overflow-y: auto;
+            background: var(--color-light-black);
+            // max-height: 300px;
+        }
+
+        .removable-widget-content > div {
+            background: var(--color-light-black);
+        } 
+
+        .measurement-btns {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--color-light-black);
+            padding: 5px;
+
+            > button {
+                margin: 0 5px;
+                border: none;
+                border-radius: 2px;
+                background: var(--color-light-black);
+                color: var(--color-white);
+
+                &:hover, &:focus {
+                    background: var(--color-dark-grey);
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    .feature-table-container {
+        position: fixed;
+        bottom: 5px;
+        left: 0;
+        width: 100%;
+        z-index: 101;
+
+        .open-fTable {
+            display: flex;
+            justify-content: center;
+
+            button {
+                border: 1px solid var(--color-white);
+                border-bottom: none;
+                background: var(--color-black);
+                opacity: 0.7;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                color: var(--color-white);
+                padding: 0 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.5s ease;
+
+                > svg {
+                    font-size: 16px;
+                }
+
+                &:focus, &:hover {
+                    outline: none;
+                    opacity: 0.9;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .fTable-wrapper {
+            background: var(--color-black);
+
+            .feature-table-content {
+                height: 100%;
+
+                .fTable-tabs-container {
+                    padding: 10px 10px 0 10px;
+                    display: flex;
+                    align-items: center;
+                    
+                    button {
+                        margin-right: 3px;
+                    }
+
+                    .save-btn {
+                        padding: 4px;
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+
+                > div:last-of-type {
+                    height: 100%;
+                    overflow-x: scroll;
+                }
+            }
+        }
+
+        .ResizePanel-module_ResizeBarVertical__2LUZV {
+            min-height: 5px !important;
+        }
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .esri-widget--button {
+        opacity: 0.8;
+        background: var(--color-black);
+        color: var(--color-white);
+        
+        &:hover, &:focus {
+            outline: none;
+            opacity: 1;
+            background: var(--color-black);
+            color: var(--color-white);
+        }
+    }
+
+    .esri-basemap-gallery__item-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(120px, 1fr));
+        
+        .esri-basemap-gallery__item {
+            display: block;
+            text-align: center;
+            border: none;
+            
+            .esri-basemap-gallery__item-thumbnail {
+                width: unset;
+            }
+
+            .esri-basemap-gallery__item-title {
+                color: var(--color-white);
+            }
+
+            &:first-child {
+                margin: unset;
+            }
+        }
+
+        .esri-basemap-gallery__item:hover,
+        .esri-basemap-gallery__item:focus,
+        .esri-basemap-gallery__item--selected,
+        .esri-basemap-gallery__item--selected:focus {
+            background: none;
+            background-color: none;
+            cursor: pointer;
+
+            .esri-basemap-gallery__item-title {
+                color: var(--color-blue-alt);
+            }
+        }
+    }
+
+    .esri-layer-list {
+        color: var(--color-white);
+        
+        .esri-layer-list__item {
+            background: var(--color-light-black);
+
+            .esri-layer-list__item-actions {
+                width: 50%;
+                float: right;
+                border: 1px solid var(--color-white);
+                background: var(--color-black);
+                color: var(--color-white);
+
+                .esri-layer-list__item-action {
+                    &:hover, &:focus {
+                        background: var(--color-light-black);
+                    }
+                }
+            }
+
+            .esri-layer-list__item-actions-menu-item {
+
+                // .esri-icon-layer-list::before {
+                //     content: "•••";
+                // }
+
+                &:hover, &:focus {
+                    outline: none;
+                    background: var(--color-dark-grey);
+                }
+            }
+
+            .esri-legend {
+                background: var(--color-light-black);
+                color: var(--color-white);
+            }
+        }
+
+        .esri-layer-list__item-actions-menu-item--active {
+            background: var(--color-light-black);
+        }
+    }
+    
+    .esri-bookmarks .esri-widget__content--empty {
+        background: var(--color-light-black);
+        color: var(--color-white);
+
+        .esri-widget__heading {
+            color: var(--color-light-grey);
+        }
+    }
+
+    .esri-bookmarks__bookmark {
+        background: var(--color-light-black);
+
+        > * {
+            color: var(--color-white);
+
+            > button {
+                color: var(--color-white);
+
+                &:hover, &:focus {
+                    background: var(--color-dark-grey);
+                    outline: none;
+                }
+            }
+        }
+
+        &:hover, &:focus {
+            background: var(--color-dark-grey);
+            outline: none;
+        }
+    }
+
+    .esri-bookmarks__add-bookmark {
+        background: var(--color-light-black);
+
+        > button {
+            color: var(--color-white);
+
+            &:hover, &:focus {
+                background: var(--color-dark-grey);
+                outline: none;
+            }
+        }
+    }
+
+    .esri-bookmarks__authoring-card {
+        background: var(--color-shadow-grey);
+
+        .esri-bookmarks__authoring-form {
+            background: var(--color-light-black);
+            color: var(--color-white);
+
+            .esri-bookmarks__authoring-actions > input {
+                color: var(--color-white);
+
+                &:last-of-type {
+                    background: var(--color-dark-grey);
+                    border: none;
+                }
+
+                &:hover, &:focus {
+                    outline: none;
+                    background: var(--color-grey);
+                }
+            }
+        }
+    }
+
+    .esri-time-slider__slider {
+        background: var(--color-light-black);
+
+        .esri-slider {
+            background: var(--color-light-black);
+
+            .esri-slider__tick-label {
+                color: var(--color-white);
+            }
+        }
+    }
+
+    .esri-time-slider__min > div, .esri-time-slider__max > div {
+        color: var(--color-white);
+    }
+
+    .esri-time-slider__previous, .esri-time-slider__animation, .esri-time-slider__next {
+        > button {
+            background: var(--color-light-black);
+            color: var(--color-white);
+            border-radius: 3px;
+            transition: all 0.5s ease;
+
+            &:hover, &:focus {
+                outline: none;
+                background: var(--color-dark-grey) !important;
+            }
+        }
+    }
+
+    .esri-feature-table__header {
+        background: var(--color-black);
+        color: var(--color-white);
+    }
+
+    .esri-grid__grid {
+
+        vaadin-grid-cell-content {
+            background: var(--color-light-black);
+            color: var(--color-white);
+            height: 75%;
+            text-align: center;
+
+            &:hover {
+                background: var(--color-dark-grey);
+            }
+        }
+
+        vaadin-checkbox {
+            background: var(--color-white);
+        }
+
+        .esri-field-column__header-content {
+            height: unset;
+        }
+    }
+        
+    .esri-button-menu, .esri-column__menu-container {
+        background: inherit;
+
+        > .esri-button-menu__button {
+            border-radius: 3px;
+            transition: all 0.5s ease;
+
+            &:hover, &:focus {
+                outline: none;
+                background: var(--color-dark-grey);
+            }
+        }
+    }
+}
+
+.height-0 {
+    height: 0px;
+}
+
+.map-loader {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+}

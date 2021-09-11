@@ -1,0 +1,76 @@
+.card-container {
+    // padding: 2.5px;
+    // color: var(--color-white);
+    background: var(--color-light-black);
+}
+
+.card-wrapper {
+    height: calc(100% - 5px);
+}
+
+.card-wrapper-dashboard {
+    height: 100%;
+}
+
+.card-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 5px;
+    font-size: 10px;
+
+    .card-left-panel {
+        display: flex;
+        align-items: center;
+        max-width: 80%;
+        overflow: hidden;
+
+        > div {
+            padding: 0 5px;
+        }
+    }
+
+    .card-right-panel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 15px;
+    }
+}
+
+.card-content {
+    height: calc(100% - 16px);
+    position: relative;
+}
+
+.dashboard-type-content {
+    height: 100%;
+}
+
+.text-truncate {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.tab-dropdown {
+    top: 30px;
+    right: 0;
+
+    .tab-dropdown-btn {
+        width: 100%;
+        background: inherit;
+        border: none;
+        color: var(--color-white);
+        padding: 5px 10px;
+        white-space: nowrap;
+    }
+
+    .tab-dropdown-btn-active, .tab-dropdown-btn:hover, .tab-dropdown-btn:focus {
+        outline: none;
+        cursor: pointer;
+        background: var(--color-grey);
+    }
+}

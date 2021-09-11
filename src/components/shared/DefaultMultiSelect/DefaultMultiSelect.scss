@@ -1,0 +1,185 @@
+.multiselect-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+
+    .multiselect-btn {
+        // width: 100%;
+        width: 75%;
+        min-width: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid var(--color-white);
+        border-radius: 2px;
+        background: var(--color-black);
+        color: var(--color-white);
+
+        &:hover, &:focus {
+            outline: none;
+            cursor: pointer;
+        }
+    }
+
+    .multi-dropdown-wrapper {
+        position: absolute;
+        top: 30px;
+        z-index: 11;
+        border: 1px solid var(--color-white);
+        border-radius: 3px;
+        background: var(--color-light-black);
+
+        .multi-dropdown-search {
+            width: calc(100% - 20px);
+            margin: 10px 10px 5px;
+            border: none;
+            background: none;
+            border-bottom: 2px solid var(--color-green-alt);
+            padding: 5px 0;
+            font-style: italic;
+            color: var(--color-white);
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .multi-options-container {
+            overflow-y: auto;
+            margin-bottom: 10px;
+
+            .multi-dropdown-option {
+                width: 100%;
+                background: inherit;
+                border: none;
+                color: var(--color-white);
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                font-size: 12px;
+    
+                .MuiButtonBase-root {
+                    font-size: 16px;
+                }
+    
+                &:focus, &:hover {
+                    outline: none;
+                    cursor: pointer;
+                    background: var(--color-grey);
+                }
+    
+                .checkbox-oultine {
+                    color: var(--color-white);
+                }
+    
+                .checkbox-checked {
+                    background: var(--color-white);
+                    color: var(--color-light-black);
+                    border-radius: 3px;
+                }
+
+                .btn-text {
+                    overflow : hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                }
+            }
+
+            .option-disabled {
+                color: var(--color-dark-grey);
+                
+                .MuiSvgIcon-root {
+                    fill: var(--color-dark-grey) !important;
+                }
+            }
+
+        }
+
+        .multi-dropdown-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid var(--color-white);
+            padding: 5px 10px;
+            background: var(--color-light-black);
+
+            > div {
+                display: flex;
+
+                .multi-filter-btn:first-of-type {
+                    margin-right: 5px;
+                }
+            }
+
+            .multi-filter-btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: none;
+                border: none;
+                transition: all 0.5s ease;
+                color: var(--color-white);
+                padding: 5px;  border-radius: 2px;
+                font-size: 10px;
+
+                > svg {
+                    font-size: 16px;
+                }
+              
+                &:hover {
+                  background: var(--color-dark-grey);
+                  cursor: pointer;
+                  font-weight: bold;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .active-filter-btn {
+                background: var(--color-dark-grey);
+                font-weight: bold;
+            }
+        }
+
+        .multi-dropdown-clear {
+            position: absolute;
+            top: 15px;
+            right: 14px;
+
+            > svg {
+                font-size: 14px;
+            }
+        }
+
+        .empty-dropdown {
+            font-size: 14px;
+            text-align: center;
+            padding: 5px 0 10px;
+        }
+    }
+
+    .count-enabled {
+        width: 75%;
+    }
+
+    .adjust-position {
+        min-width: 160px;
+        max-width: 210px;
+        right: 3px;
+        top: 22px;
+    }
+
+    .default-height {
+        max-height: 205px;
+    }
+
+    .adjust-height {
+        max-height: 130px;
+    }
+}

@@ -1,0 +1,49 @@
+.header-nav {
+    display: flex;
+    padding: 5px 15px 10px;
+    background: var(--color-light-black);
+    color: var(--color-white);
+
+    .ghd-logo-container {
+        padding-top: 10px;
+
+        > div {
+            border-right: 1px solid var(--color-white);
+            padding-right: 20px;
+            margin-right: 15px;
+
+            > img {
+                height: 40px;
+                width: 100px;
+            }
+        }
+    }
+
+    .company-info {
+        font-size: 26px;
+        font-weight: 400;
+    }
+
+    .select-site {
+        margin: auto;
+        display: flex;
+        align-items: center;
+
+        label {
+            font-size: 16px;
+            padding: 0 10px;
+        }
+
+        select {
+            background: var(--color-light-black);
+            border: 1px solid var(--color-white);
+            color: inherit;
+            border-radius: 3px;
+        }
+    }
+
+    > div:last-of-type {
+        font-weight: 500;
+        font-size: 24px;
+    }
+}

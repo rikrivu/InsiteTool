@@ -1,0 +1,24 @@
+.d-dashboard-container {
+    height: calc(100vh - 69px);
+    background: var(--color-black);
+    color: var(--color-white);
+
+    .layout {
+        width: 100vw;
+        height: calc(100vh - 69px) !important;
+    }
+}
+
+.gridItem > div {
+    height: 100%;
+}
+
+.drag-handle {
+    position: absolute;
+    right: 0px;
+    top: 3px;
+
+    svg {
+        font-size: 20px;
+    }
+}

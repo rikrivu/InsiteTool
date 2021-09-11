@@ -1,0 +1,14 @@
+.ts-content-wrapper {
+    height: calc(100% - 5px);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.ts-chart-options-container {
+    padding: 5px;
+
+    label {
+        font-size: 12px;
+    }
+}
